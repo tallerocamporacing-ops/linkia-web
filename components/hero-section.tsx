@@ -31,7 +31,7 @@ export function HeroSection() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Sin permanencia. Cancelás cuando quieras. Reembolso 7 días.
+              Facturación mensual, sin contratos ni permanencia.
             </p>
           </div>
 

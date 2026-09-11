@@ -7,7 +7,7 @@ import { Reveal } from "@/components/reveal"
 const faqs = [
   {
     q: "¿Cuánto cuesta LINKIA?",
-    a: "$54.000 por mes, sin permanencia. Podés cancelar cuando quieras. Los primeros 7 días tenés reembolso completo — si no te sirve, te devolvemos la plata a la misma tarjeta sin preguntas.",
+    a: "$54.000 por mes, con facturación mensual y sin contratos de permanencia. Todas las funciones del sistema vienen incluidas; el único módulo aparte es el de Marketing/Leads.",
   },
   {
     q: "¿Todas las funciones vienen incluidas en ese precio?",
@@ -20,14 +20,6 @@ const faqs = [
   {
     q: "¿Necesito instalar algo?",
     a: "No. LINKIA funciona 100% en el navegador desde celular, tablet o PC. No hace falta descargar nada ni tener un servidor propio.",
-  },
-  {
-    q: "¿Qué pasa si no me gusta?",
-    a: "Tenés 7 días de reembolso completo sin preguntas. Escribís por WhatsApp y te devolvemos la plata a la misma tarjeta.",
-  },
-  {
-    q: "¿Puedo cancelar en cualquier momento?",
-    a: "Sí, sin permanencia. La cancelación es inmediata desde tu cuenta de Mercado Pago o pidiéndolo por WhatsApp.",
   },
   {
     q: "¿Cuánto tarda la activación después del pago?",

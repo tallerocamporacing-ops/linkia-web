@@ -33,7 +33,7 @@ export function FinalCtaSection() {
         </div>
         <div className="flex items-center gap-2 text-sm text-silver/80">
           <ShieldCheck className="size-4 text-electric" aria-hidden="true" />
-          Pago con Mercado Pago · Reembolso 7 días · Sin permanencia
+          Pago con Mercado Pago · Facturación mensual, sin contratos
         </div>
       </Reveal>
     </section>

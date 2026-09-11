@@ -73,7 +73,7 @@ export function PricingSection() {
               </a>
               <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
                 <ShieldCheck className="size-4 text-electric" aria-hidden="true" />
-                Pago con Mercado Pago · Cancelás cuando quieras · Reembolso 7 días
+                Pago con Mercado Pago · Facturación mensual, sin contratos
               </div>
             </div>
           </div>
