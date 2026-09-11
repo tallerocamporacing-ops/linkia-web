@@ -21,7 +21,7 @@ export function TourSection() {
         <Reveal delay={200} className="mt-10">
           <div className="relative overflow-hidden rounded-2xl border border-border bg-navy shadow-2xl">
             <video
-              src="/videos/tour.mp4"
+              src="https://linkia.com.ar/assets/videos/tour.mp4"
               controls
               playsInline
               preload="metadata"
