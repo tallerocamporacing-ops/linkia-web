@@ -1,19 +1,31 @@
-import { MessageCircle, Sparkles, Instagram, Facebook } from "lucide-react"
-import { WHATSAPP_URL } from "@/lib/constants"
+import { ArrowUpRight, Megaphone, Instagram, Facebook, MessageCircle, Camera, TrendingUp, Handshake } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
+const CONDIMENTO_URL = "https://condimentomkt.com"
+
 const canales = [
-  { icon: MessageCircle, label: "WhatsApp", color: "text-emerald-500" },
   { icon: Instagram, label: "Instagram", color: "text-pink-500" },
+  { icon: MessageCircle, label: "WhatsApp", color: "text-emerald-500" },
   { icon: Facebook, label: "Facebook", color: "text-blue-500" },
+  { icon: Camera, label: "Contenido audiovisual", color: "text-orange-500" },
 ]
 
-const puntos = [
-  "Todos los leads de tus campañas caen en un solo CRM",
-  "Ves de qué canal (IG, WA, FB, Google) viene cada uno",
-  "Estadística de conversión por canal para saber qué campaña rinde",
-  "Nunca más un mensaje sin responder ni un lead perdido",
-  "Se conecta con las campañas publicitarias que ya tenés activas",
+const beneficios = [
+  {
+    icon: Megaphone,
+    title: "Manejo de redes y campañas",
+    desc: "Instagram, Facebook, Google Ads. Publicidad segmentada para que más autos entren a tu taller.",
+  },
+  {
+    icon: Camera,
+    title: "Contenido audiovisual",
+    desc: "Reels, fotos y videos profesionales del taller para que tu marca se vea seria y confiable.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Estrategia de crecimiento",
+    desc: "Analizan qué canales te rinden más y ajustan la campaña para que cada peso invertido vuelva multiplicado.",
+  },
 ]
 
 export function MarketingModuleSection() {
@@ -22,27 +34,28 @@ export function MarketingModuleSection() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-3 py-1 font-mono text-xs font-medium text-electric">
-              <Sparkles className="size-3.5" aria-hidden="true" />
-              Módulo aparte · Opcional
+            <span className="inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-orange-400/10 px-3 py-1 font-mono text-xs font-medium text-orange-300">
+              <Handshake className="size-3.5" aria-hidden="true" />
+              Servicio aliado · Se contrata aparte
             </span>
           </Reveal>
           <Reveal delay={100}>
             <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
-              Módulo de Marketing y Leads
+              ¿Querés que entre más trabajo al taller?
             </h2>
           </Reveal>
           <Reveal delay={150}>
             <p className="mt-4 text-lg leading-relaxed text-silver">
-              Si tenés campañas publicitarias activas (Meta Ads, Google Ads,
-              Instagram), este módulo centraliza todos tus leads en un solo
-              lugar y te muestra por dónde te está entrando el trabajo.
+              LINKIA te ordena por dentro. Para conseguir más clientes por
+              afuera trabajamos con <b className="text-white">Condimento</b>,
+              agencia de marketing digital especializada en pymes
+              argentinas.
             </p>
           </Reveal>
         </div>
 
         <Reveal delay={200}>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             {canales.map((c) => {
               const Icon = c.icon
               return (
@@ -55,57 +68,70 @@ export function MarketingModuleSection() {
                 </div>
               )
             })}
-            <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium">
-              <span className="text-orange-400">G</span> Google
-            </div>
           </div>
         </Reveal>
 
         <Reveal delay={300}>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {puntos.map((p) => (
-              <div
-                key={p}
-                className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4"
-              >
-                <div className="mt-1 size-2 shrink-0 rounded-full bg-electric" />
-                <span className="text-sm leading-relaxed text-silver">{p}</span>
-              </div>
-            ))}
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {beneficios.map((b) => {
+              const Icon = b.icon
+              return (
+                <div
+                  key={b.title}
+                  className="flex flex-col gap-3 rounded-xl border border-white/10 bg-white/5 p-5"
+                >
+                  <div className="flex size-10 items-center justify-center rounded-lg bg-orange-500/20 text-orange-400">
+                    <Icon className="size-5" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-heading text-base font-semibold text-white">
+                    {b.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-silver">
+                    {b.desc}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </Reveal>
 
         <Reveal delay={400}>
-          <div className="mt-10 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-6 sm:p-8">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400">
-                <Sparkles className="size-6" aria-hidden="true" />
-              </div>
+          <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/10 via-white/5 to-transparent p-6 sm:p-8">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex-1">
-                <h3 className="font-heading text-lg font-semibold text-white">
-                  Importante: no viene incluido en los $54.000/mes
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-silver">
-                  Este módulo se cobra aparte porque hay que configurarlo a
-                  medida para cada taller (conectar tus cuentas de Meta,
-                  Google, WhatsApp Business). El precio depende de las
-                  integraciones que necesites.
+                <div className="flex items-center gap-3">
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white shadow-lg">
+                    <Megaphone className="size-6" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <div className="font-heading text-xl font-bold text-white">
+                      Condimento
+                    </div>
+                    <div className="text-sm text-silver">
+                      Marketing 360° para pymes · +8 años potenciando negocios argentinos
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-silver/90">
+                  Ellos manejan tus redes, tu publicidad y tu contenido para
+                  que más personas te conozcan, te elijan y vuelvan a
+                  comprarte. Pedís tu reunión sin cargo y arman un plan a
+                  medida.
                 </p>
-                <p className="mt-3 text-sm text-silver/80">
-                  <b>Si te interesa</b>, escribinos por WhatsApp y te mandamos
-                  un video explicativo del módulo + presupuesto ajustado a tu
-                  caso.
+                <p className="mt-3 text-xs text-silver/70">
+                  ⚠️ Este servicio se cotiza y contrata directamente con
+                  Condimento — no viene incluido en los $54.000/mes de LINKIA.
                 </p>
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 rounded-lg bg-whatsapp px-5 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105"
-                >
-                  <MessageCircle className="size-4" aria-hidden="true" />
-                  Consultar por el módulo de Marketing
-                </a>
               </div>
+              <a
+                href={CONDIMENTO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-orange-500 px-6 py-4 text-base font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-transform hover:scale-105 hover:bg-orange-600"
+              >
+                Ver Condimento
+                <ArrowUpRight className="size-5" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </Reveal>
