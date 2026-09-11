@@ -1,7 +1,10 @@
 import { SiteNav } from "@/components/site-nav"
 import { HeroSection } from "@/components/hero-section"
+import { TourSection } from "@/components/tour-section"
 import { FeaturesSection } from "@/components/features-section"
 import { ReelsSection } from "@/components/reels-section"
+import { PricingSection } from "@/components/pricing-section"
+import { FaqSection } from "@/components/faq-section"
 import { FinalCtaSection } from "@/components/final-cta-section"
 import { SocialSection } from "@/components/social-section"
 import { SiteFooter } from "@/components/site-footer"
@@ -13,8 +16,11 @@ export default function Home() {
       <SiteNav />
       <main className="flex-1">
         <HeroSection />
+        <TourSection />
         <FeaturesSection />
         <ReelsSection />
+        <PricingSection />
+        <FaqSection />
         <FinalCtaSection />
         <SocialSection />
       </main>

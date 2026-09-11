@@ -2,13 +2,16 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { LogIn, Menu, MessageCircle, X } from "lucide-react"
-import { LOGIN_URL, WHATSAPP_URL } from "@/lib/constants"
+import { ArrowRight, LogIn, Menu, X } from "lucide-react"
+import { CHECKOUT_URL, LOGIN_URL } from "@/lib/constants"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const navLinks = [
+  { label: "Cómo funciona", href: "#tour" },
   { label: "Funciones", href: "#funciones" },
   { label: "Ejemplos", href: "#ejemplos" },
+  { label: "Precio", href: "#precio" },
+  { label: "FAQ", href: "#faq" },
 ]
 
 export function SiteNav() {
@@ -53,14 +56,6 @@ export function SiteNav() {
               {link.label}
             </a>
           ))}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-heading text-[15px] font-semibold text-navy transition-colors hover:text-brand hover:underline hover:underline-offset-4 dark:text-foreground dark:hover:text-brand"
-          >
-            Contacto
-          </a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -75,14 +70,12 @@ export function SiteNav() {
           </a>
 
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-105 sm:px-5"
+            href={CHECKOUT_URL}
+            className="inline-flex items-center gap-2 rounded-full bg-electric px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-105 hover:bg-brand sm:px-5"
           >
-            <MessageCircle className="size-4" aria-hidden="true" />
-            <span className="hidden sm:inline">Escribinos por WhatsApp</span>
-            <span className="sm:hidden">WhatsApp</span>
+            <span className="hidden sm:inline">Suscribirme</span>
+            <span className="sm:hidden">Empezar</span>
+            <ArrowRight className="size-4" aria-hidden="true" />
           </a>
 
           <button
@@ -124,15 +117,6 @@ export function SiteNav() {
               {link.label}
             </a>
           ))}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsMenuOpen(false)}
-            className="rounded-lg px-3 py-4 font-heading text-lg font-semibold text-navy transition-colors hover:bg-muted hover:text-brand dark:text-foreground dark:hover:text-brand"
-          >
-            Contacto
-          </a>
         </nav>
       )}
     </header>
