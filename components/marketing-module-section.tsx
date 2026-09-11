@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ArrowUpRight, Megaphone, Instagram, Facebook, MessageCircle, Camera, TrendingUp, Handshake } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
@@ -99,12 +100,18 @@ export function MarketingModuleSection() {
           <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/10 via-white/5 to-transparent p-6 sm:p-8">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex-1">
-                <div className="flex items-center gap-3">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white shadow-lg">
-                    <Megaphone className="size-6" aria-hidden="true" />
+                <div className="flex items-center gap-4">
+                  <div className="relative size-16 shrink-0 overflow-hidden rounded-2xl shadow-lg ring-1 ring-white/10">
+                    <Image
+                      src="/partners/condimento-icon.png"
+                      alt="Logo de Condimento"
+                      width={326}
+                      height={326}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                   <div>
-                    <div className="font-heading text-xl font-bold text-white">
+                    <div className="font-heading text-2xl font-bold text-white">
                       Condimento
                     </div>
                     <div className="text-sm text-silver">
