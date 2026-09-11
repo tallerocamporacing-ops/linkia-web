@@ -7,9 +7,9 @@ import { CHECKOUT_URL, LOGIN_URL } from "@/lib/constants"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const navLinks = [
-  { label: "Cómo funciona", href: "#tour" },
+  { label: "Video", href: "#tour" },
   { label: "Funciones", href: "#funciones" },
-  { label: "Ejemplos", href: "#ejemplos" },
+  { label: "Marketing", href: "#marketing" },
   { label: "Precio", href: "#precio" },
   { label: "FAQ", href: "#faq" },
 ]

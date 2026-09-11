@@ -24,9 +24,57 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'LINKIA | Tu taller, conectado',
+  metadataBase: new URL('https://www.linkia.com.ar'),
+  title: {
+    default: 'LINKIA — Software de gestión para talleres mecánicos | $54.000/mes',
+    template: '%s | LINKIA',
+  },
   description:
-    'LINKIA es el sistema de gestión para talleres mecánicos: órdenes de trabajo digitales, agenda con recordatorios por WhatsApp, presupuestos, facturación y CRM en un solo lugar.',
+    'Ordená tu taller mecánico con LINKIA: órdenes de trabajo, presupuestos con firma digital, kanban con semáforo de demora, portal para el cliente, recordatorios de VTV y service, control de repuestos y proveedores. Todo en un solo sistema por $54.000/mes.',
+  keywords: [
+    'software taller mecánico',
+    'sistema gestión taller',
+    'órdenes de trabajo taller',
+    'presupuestos taller mecánico',
+    'CRM taller',
+    'facturación taller mecánico',
+    'kanban taller',
+    'agenda turnos taller',
+    'linkia',
+    'gestión de repuestos',
+    'firma digital orden trabajo',
+    'taller mecánico Argentina',
+  ],
+  authors: [{ name: 'Agustín Ocampo', url: 'https://www.linkia.com.ar' }],
+  creator: 'LINKIA',
+  publisher: 'LINKIA',
+  category: 'business',
+  alternates: { canonical: 'https://www.linkia.com.ar' },
+  openGraph: {
+    type: 'website',
+    locale: 'es_AR',
+    url: 'https://www.linkia.com.ar',
+    siteName: 'LINKIA',
+    title: 'LINKIA — Software de gestión para talleres mecánicos',
+    description:
+      'Órdenes de trabajo, kanban con semáforo, portal para el cliente, firma digital, presupuestos, agenda y control de repuestos. Todo por $54.000/mes.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LINKIA — Tu taller, conectado',
+    description:
+      'Sistema de gestión para talleres mecánicos. $54.000/mes con reembolso de 7 días.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   generator: 'v0.app',
   icons: {
     icon: [
@@ -42,6 +90,30 @@ export const metadata: Metadata = {
       },
     ],
   },
+}
+
+const jsonLdSoftware = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'LINKIA',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'Offer',
+    price: '54000',
+    priceCurrency: 'ARS',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '54000',
+      priceCurrency: 'ARS',
+      unitCode: 'MON',
+      referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
+    },
+  },
+  description:
+    'Sistema de gestión para talleres mecánicos con órdenes de trabajo, kanban, portal del cliente, firma digital, presupuestos, turnos y control de repuestos.',
+  url: 'https://www.linkia.com.ar',
+  inLanguage: 'es-AR',
 }
 
 export const viewport: Viewport = {
@@ -76,6 +148,10 @@ export default function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSoftware) }}
+        />
       </head>
       <body className="antialiased">
         {children}
