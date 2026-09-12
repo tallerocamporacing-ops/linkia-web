@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { ArrowRight, LogIn, Menu, X } from "lucide-react"
 import { CHECKOUT_URL, LOGIN_URL } from "@/lib/constants"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -29,16 +28,25 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#top" className="flex items-center">
-          <span className="flex items-center rounded-xl bg-white px-2.5 py-1.5 shadow-sm">
-            <Image
-              src="/images/linkia-logo-full.png"
-              alt="LINKIA - tu taller, conectado"
-              width={220}
-              height={155}
-              priority
-              className="h-11 w-auto object-contain"
+        <a href="#top" className="group flex items-center gap-2.5" aria-label="LINKIA - Tu taller, conectado">
+          <svg
+            viewBox="0 0 64 40"
+            className="h-8 w-auto text-electric transition-transform group-hover:scale-105"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 20c0-6.6 5.4-12 12-12s12 5.4 12 12-5.4 12-12 12S20 26.6 20 20zm4 0c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8-8 3.6-8 8z"
+              fill="currentColor"
             />
+            <path
+              d="M44 20c0-6.6 5.4-12 12-12s12 5.4 12 12-5.4 12-12 12-12-5.4-12-12zm4 0c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8-8 3.6-8 8z"
+              fill="currentColor"
+              transform="translate(-14 0)"
+            />
+          </svg>
+          <span className="font-heading text-2xl font-extrabold tracking-tight text-navy dark:text-foreground">
+            LINKIA
           </span>
         </a>
 

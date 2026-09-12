@@ -1,5 +1,6 @@
 import { SiteNav } from "@/components/site-nav"
 import { HeroSection } from "@/components/hero-section"
+import { StatsSection } from "@/components/stats-section"
 import { TourSection } from "@/components/tour-section"
 import { WorkflowSection } from "@/components/workflow-section"
 import { FeaturesSection } from "@/components/features-section"
@@ -18,6 +19,7 @@ export default function Home() {
       <SiteNav />
       <main className="flex-1">
         <HeroSection />
+        <StatsSection />
         <TourSection />
         <WorkflowSection />
         <FeaturesSection />

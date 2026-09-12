@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "¿Mis datos están seguros?",
-    a: "Sí. LINKIA corre sobre Cloudflare (misma infraestructura que usan bancos y gobiernos). Backup automático diario, conexión encriptada, cada taller ve solo sus datos.",
+    a: "Sí. Backup automático diario, conexión encriptada de punta a punta y cada taller ve únicamente sus datos. Nadie más accede a tu información.",
   },
 ]
 
