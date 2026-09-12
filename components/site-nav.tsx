@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { ArrowRight, LogIn, Menu, X } from "lucide-react"
 import { CHECKOUT_URL, LOGIN_URL } from "@/lib/constants"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -28,42 +29,15 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#top" className="group flex items-center gap-2.5" aria-label="LINKIA - Tu taller, conectado">
-          {/* Símbolo LINKIA — infinito estilizado con la "b" integrada. SVG puro, escala sin cortarse ni difuminarse. */}
-          <svg
-            viewBox="0 0 80 44"
-            className="h-9 w-auto transition-transform group-hover:scale-105"
-            fill="none"
-            aria-hidden="true"
-          >
-            <defs>
-              <linearGradient id="lk-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#38bdf8" />
-                <stop offset="60%" stopColor="#00a3ff" />
-                <stop offset="100%" stopColor="#0284c7" />
-              </linearGradient>
-            </defs>
-            {/* Anillo izquierdo (la "b" estilizada) */}
-            <path
-              d="M20 22c0-7.7 6.3-14 14-14s14 6.3 14 14-6.3 14-14 14-14-6.3-14-14zm5 0c0 5 4 9 9 9s9-4 9-9-4-9-9-9-9 4-9 9z"
-              fill="url(#lk-grad)"
-            />
-            {/* Anillo derecho (el infinito) */}
-            <path
-              d="M46 22c0-7.7 6.3-14 14-14s14 6.3 14 14-6.3 14-14 14-14-6.3-14-14zm5 0c0 5 4 9 9 9s9-4 9-9-4-9-9-9-9 4-9 9z"
-              fill="url(#lk-grad)"
-            />
-            {/* Trazo diagonal que conecta ambos (le da la impresión de infinito ∞) */}
-            <path
-              d="M28 15l24 14"
-              stroke="url(#lk-grad)"
-              strokeWidth="4"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="font-heading text-2xl font-extrabold tracking-tight text-navy dark:text-foreground">
-            LINKIA
-          </span>
+        <a href="#top" className="group flex items-center" aria-label="LINKIA - Tu taller, conectado">
+          <Image
+            src="/images/linkia-full-transparent.png?v=6"
+            alt="LINKIA"
+            width={1359}
+            height={1040}
+            priority
+            className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </a>
 
         <nav
