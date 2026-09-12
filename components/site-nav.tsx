@@ -31,10 +31,10 @@ export function SiteNav() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#top" className="group flex items-center gap-2" aria-label="LINKIA - Tu taller, conectado">
           <Image
-            src="/images/linkia-symbol-clean.png?v=3"
+            src="/images/linkia-symbol-clean.png?v=4"
             alt=""
-            width={1277}
-            height={1277}
+            width={1161}
+            height={704}
             priority
             className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
           />
