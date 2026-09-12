@@ -12,8 +12,8 @@ export function TourSection() {
           </Reveal>
           <Reveal delay={100}>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Un recorrido rápido por el sistema con datos reales del taller
-              Ocampo Racing.
+              Un recorrido rápido por el sistema con datos de ejemplo para que veas
+              todas las funciones sin exponer información sensible de clientes reales.
             </p>
           </Reveal>
         </div>
