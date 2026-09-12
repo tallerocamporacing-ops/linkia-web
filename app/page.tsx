@@ -12,6 +12,7 @@ import { FinalCtaSection } from "@/components/final-cta-section"
 import { SocialSection } from "@/components/social-section"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
+import { MercadoPagoFloatButton } from "@/components/mercadopago-float-button"
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <SocialSection />
       </main>
       <SiteFooter />
+      <MercadoPagoFloatButton />
       <WhatsAppFloatButton />
     </div>
   )
