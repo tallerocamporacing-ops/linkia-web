@@ -135,6 +135,14 @@ const themeInitScript = `(function () {
   } catch (e) {}
 })();`
 
+// Google Tag Manager — carga el contenedor GTM-T2Z656ZQ (dispara pageviews y eventos custom
+// desde GTM sin tener que redeployar la landing para cambiar tags de Analytics/Ads/etc).
+const gtmScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2Z656ZQ');`
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -152,8 +160,21 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSoftware) }}
         />
+        {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
+        {/* End Google Tag Manager */}
       </head>
       <body className="antialiased">
+        {/* Google Tag Manager (noscript) — fallback para navegadores sin JS */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T2Z656ZQ"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
