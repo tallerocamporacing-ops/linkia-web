@@ -76,19 +76,18 @@ export const metadata: Metadata = {
     },
   },
   generator: 'v0.app',
+  manifest: '/site.webmanifest',
   icons: {
     icon: [
-      {
-        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favicon-32x32-R8S54NU4yNV5hI3Zxl4oMCVE28u9W6.png',
-        sizes: '32x32',
-        type: 'image/png',
-      },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
     ],
     apple: [
-      {
-        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/apple-touch-icon-a5xAsmKWUHdcXSYFd7gD7mYHoZorIA.png',
-      },
+      { url: '/favicon-180.png', sizes: '180x180', type: 'image/png' },
     ],
+    shortcut: [{ url: '/favicon.ico' }],
   },
 }
 
