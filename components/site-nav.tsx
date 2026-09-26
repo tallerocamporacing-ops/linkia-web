@@ -7,11 +7,12 @@ import { CHECKOUT_URL, LOGIN_URL } from "@/lib/constants"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const navLinks = [
-  { label: "Video", href: "#tour" },
-  { label: "Funciones", href: "#funciones" },
-  { label: "Marketing", href: "#marketing" },
-  { label: "Precio", href: "#precio" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Video", href: "/#tour" },
+  { label: "Funciones", href: "/#funciones" },
+  { label: "Marketing", href: "/#marketing" },
+  { label: "Precio", href: "/#precio" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/#faq" },
 ]
 
 export function SiteNav() {
@@ -21,15 +22,19 @@ export function SiteNav() {
     event: React.MouseEvent<HTMLAnchorElement>,
     href: string,
   ) {
-    event.preventDefault()
     setIsMenuOpen(false)
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" })
+    const hash = href.split("#")[1]
+    if (!hash || window.location.pathname !== "/") return
+    const target = document.getElementById(hash)
+    if (!target) return
+    event.preventDefault()
+    target.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#top" className="group flex items-center" aria-label="LINKIA - Tu taller, conectado">
+        <a href="/" className="group flex items-center" aria-label="LINKIA - Tu taller, conectado">
           <Image
             src="/images/linkia-full-transparent.png?v=6"
             alt="LINKIA"

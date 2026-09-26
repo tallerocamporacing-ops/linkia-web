@@ -26,6 +26,9 @@ export function SiteFooter() {
         </div>
 
         <nav className="flex items-center gap-6 text-sm text-silver">
+          <a href="/blog" className="transition-colors hover:text-white">
+            Blog
+          </a>
           <a href="/terminos" className="transition-colors hover:text-white">
             Términos
           </a>
