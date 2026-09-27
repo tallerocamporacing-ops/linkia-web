@@ -6,6 +6,7 @@ import { WorkflowSection } from "@/components/workflow-section"
 import { FeaturesSection } from "@/components/features-section"
 import { MarketingModuleSection } from "@/components/marketing-module-section"
 import { ReelsSection } from "@/components/reels-section"
+import { CursoPromoSection } from "@/components/curso-promo-section"
 import { PricingSection } from "@/components/pricing-section"
 import { FaqSection } from "@/components/faq-section"
 import { FinalCtaSection } from "@/components/final-cta-section"
@@ -27,6 +28,7 @@ export default function Home() {
         <MarketingModuleSection />
         <ReelsSection />
         <PricingSection />
+        <CursoPromoSection />
         <FaqSection />
         <FinalCtaSection />
         <SocialSection />

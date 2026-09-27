@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Funciones", href: "/#funciones" },
   { label: "Marketing", href: "/#marketing" },
   { label: "Precio", href: "/#precio" },
+  { label: "Curso", href: "/curso" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/#faq" },
 ]
