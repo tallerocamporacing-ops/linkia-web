@@ -25,6 +25,7 @@ import { Reveal } from "@/components/reveal"
 import { Temario } from "@/components/curso/temario"
 import { CursoFaq } from "@/components/curso/curso-faq"
 import { StickyCta } from "@/components/curso/sticky-cta"
+import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
 import { PRICE_ARS_LABEL } from "@/lib/constants"
 import {
   BONUS_MESES,
@@ -91,7 +92,7 @@ export const metadata: Metadata = {
 const stats = [
   { icon: Clock, numero: CURSO_HORAS_LABEL, label: "de video", sub: `${CURSO_MINUTOS} min editados`, color: "text-electric" },
   { icon: Layers, numero: "11", label: "módulos", sub: "video + PDF cada uno", color: "text-emerald-500" },
-  { icon: Gift, numero: `${BONUS_MESES} meses`, label: "de LINKIA gratis", sub: `valor ${BONUS_VALOR_LABEL}`, color: "text-amber-500" },
+  { icon: Gift, numero: `${BONUS_MESES} meses`, label: "de LINKIA gratis", sub: `ahorrás ${BONUS_VALOR_LABEL}`, color: "text-amber-500" },
   { icon: ShieldCheck, numero: "7 días", label: "de garantía", sub: "reembolso total", color: "text-violet-500" },
 ]
 
@@ -114,7 +115,7 @@ const incluye = [
   `${CURSO_HORAS_LABEL} de video en 11 módulos, grabados en el taller sobre autos reales`,
   "Un PDF de material por módulo para tener al lado del banco",
   "Acceso online desde celular o PC, a tu ritmo, sin vencimiento",
-  "Casos reales: Peugeot 408 THP, Fiat Sigma, VW Suran, common rail",
+  "Casos reales: Peugeot 408 THP, Ford motor Sigma, VW Suran, common rail",
   "Módulo de inteligencia artificial aplicada al taller",
   `${BONUS_MESES} meses de LINKIA con todas las funciones, sin cargo`,
 ]
@@ -274,7 +275,7 @@ export default function CursoPage() {
                 </div>
                 <p className="flex items-center gap-2 text-sm font-semibold text-brand">
                   <Gift className="size-4" aria-hidden="true" />
-                  Incluye {BONUS_MESES} meses de LINKIA sin cargo (valor {BONUS_VALOR_LABEL})
+                  Incluye {BONUS_MESES} meses de LINKIA sin cargo (ahorrás {BONUS_VALOR_LABEL})
                 </p>
               </div>
 
@@ -514,9 +515,9 @@ export default function CursoPage() {
                   </p>
                   <p className="mt-4 leading-relaxed text-foreground/85">
                     Todo lo que ves en el curso está grabado en Ocampo Racing, sobre autos de
-                    clientes reales: un Peugeot 408 THP con falla de sensor de fase, un Fiat
-                    Sigma con problemas de sincronismo, una VW Suran medida por compresión
-                    relativa. Nada de simuladores ni pizarrón.
+                    clientes reales: un Peugeot 408 THP con falla de sensor de fase, un Ford con
+                    motor Sigma con problemas de sincronismo, una VW Suran medida por
+                    compresión relativa. Nada de simuladores ni pizarrón.
                   </p>
                   <p className="mt-3 leading-relaxed text-foreground/85">
                     Además de diagnosticar, Agustín creó LINKIA para resolver el otro problema
@@ -723,6 +724,7 @@ export default function CursoPage() {
         </section>
       </main>
       <SiteFooter />
+      <WhatsAppFloatButton href={CURSO_DUDAS_URL} className="bottom-24 md:bottom-6" />
       <StickyCta />
     </div>
   )

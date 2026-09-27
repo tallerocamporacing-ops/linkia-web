@@ -110,10 +110,10 @@ export const modulos: Modulo[] = [
       "El módulo estrella. Aprendé a leer señales y a ver lo que el scanner no muestra. Con casos grabados sobre autos reales.",
     temas: [
       "Anatomía del osciloscopio y cómo configurarlo sin miedo",
-      "Sincronismo cigüeñal / árbol de levas (caso Fiat Sigma)",
+      "Sincronismo cigüeñal / árbol de levas (caso Ford motor Sigma)",
       "Falla de sensor CMP en un Peugeot 408 THP",
       "Inductancia de bobinas y compresión relativa (VW Suran)",
-      "Medición de la red CAN con osciloscopio",
+      "Medición de la red CAN con osciloscopio (Ford Sigma)",
     ],
   },
   {
