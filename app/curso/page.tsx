@@ -9,7 +9,6 @@ import {
   Check,
   Clock,
   Gift,
-  Instagram,
   Layers,
   MessageCircle,
   MonitorPlay,
@@ -20,6 +19,7 @@ import {
   Zap,
 } from "lucide-react"
 import { SiteNav } from "@/components/site-nav"
+import { InstagramIcon } from "@/components/icons/instagram-icon"
 import { SiteFooter } from "@/components/site-footer"
 import { Reveal } from "@/components/reveal"
 import { Temario } from "@/components/curso/temario"
@@ -529,7 +529,7 @@ export default function CursoPage() {
                     rel="noopener noreferrer"
                     className="mt-5 inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-muted dark:text-foreground"
                   >
-                    <Instagram className="size-4" aria-hidden="true" />
+                    <InstagramIcon className="size-4" />
                     @ocampo.racing
                   </a>
                 </div>
