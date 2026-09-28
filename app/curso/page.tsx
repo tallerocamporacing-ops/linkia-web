@@ -223,7 +223,7 @@ export default function CursoPage() {
         {/* ============ HERO ============ */}
         <section id="curso-hero" className="relative overflow-hidden bg-background">
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_70%_20%,rgba(0,163,255,0.14),transparent)]" />
-          <div className="mx-auto grid max-w-6xl gap-12 px-4 pt-12 pb-16 sm:px-6 md:grid-cols-2 md:items-center md:pt-16 md:pb-24 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-12 px-4 pt-12 pb-16 sm:px-6 md:grid-cols-[1fr_1.15fr] md:items-center md:pt-16 md:pb-24 lg:px-8">
             <div className="flex flex-col gap-6">
               <nav aria-label="Migas de pan" className="font-mono text-xs text-muted-foreground">
                 <Link href="/" className="hover:text-brand">Inicio</Link>
@@ -249,20 +249,6 @@ export default function CursoPage() {
                 sobre autos reales, en un taller real. {CURSO_HORAS_LABEL} de video para dejar de
                 cambiar piezas a ciegas y empezar a cobrar el diagnóstico.
               </p>
-
-              <ul className="grid gap-2 text-sm text-navy sm:grid-cols-2 dark:text-foreground">
-                {[
-                  "11 módulos en video + PDF por módulo",
-                  "Casos reales grabados en el taller",
-                  "Online, a tu ritmo, sin vencimiento",
-                  `${BONUS_MESES} meses de LINKIA incluidos`,
-                ].map((b) => (
-                  <li key={b} className="flex items-center gap-2">
-                    <Check className="size-4 shrink-0 text-electric" aria-hidden="true" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
 
               <div className="flex flex-col gap-2 rounded-xl border border-electric/30 bg-electric/5 p-4">
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -320,6 +306,19 @@ export default function CursoPage() {
                   className="h-auto w-full"
                 />
               </div>
+              <ul className="mt-5 grid gap-3 rounded-2xl border border-border bg-card p-5 text-sm text-navy sm:grid-cols-2 dark:text-foreground">
+                {[
+                  "11 módulos en video + PDF por módulo",
+                  "Casos reales grabados en el taller",
+                  "Online, a tu ritmo, sin vencimiento",
+                  `${BONUS_MESES} meses de LINKIA incluidos`,
+                ].map((b) => (
+                  <li key={b} className="flex items-center gap-2">
+                    <Check className="size-4 shrink-0 text-electric" aria-hidden="true" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           </div>
         </section>
