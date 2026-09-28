@@ -39,13 +39,13 @@ export function ComoTrabajaSection() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl dark:text-foreground">
-              Tres cosas que dejás de hacer a mano
+              Tu taller ordenado, sin planillas ni cuadernos
             </h2>
           </Reveal>
           <Reveal delay={150}>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Ordenar la agenda, correr atrás de los vencimientos y responderle a cada cliente
-              qué se le hizo. LINKIA lo hace por vos, todos los días.
+              Ves el trabajo del día de un vistazo, tenés a mano los próximos vencimientos
+              y le entregás a cada cliente un portal propio con todo su historial.
             </p>
           </Reveal>
         </div>
