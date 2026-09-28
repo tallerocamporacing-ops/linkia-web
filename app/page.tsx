@@ -2,7 +2,7 @@ import { SiteNav } from "@/components/site-nav"
 import { HeroSection } from "@/components/hero-section"
 import { StatsSection } from "@/components/stats-section"
 import { TourSection } from "@/components/tour-section"
-import { WorkflowSection } from "@/components/workflow-section"
+import { ComoTrabajaSection } from "@/components/como-trabaja-section"
 import { FeaturesSection } from "@/components/features-section"
 import { MarketingModuleSection } from "@/components/marketing-module-section"
 import { ReelsSection } from "@/components/reels-section"
@@ -23,7 +23,7 @@ export default function Home() {
         <HeroSection />
         <StatsSection />
         <TourSection />
-        <WorkflowSection />
+        <ComoTrabajaSection />
         <FeaturesSection />
         <MarketingModuleSection />
         <ReelsSection />
