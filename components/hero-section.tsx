@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { ArrowRight, ShieldCheck, PlayCircle } from "lucide-react"
 import { CHECKOUT_URL, PRICE_ARS_LABEL, PRICE_USD } from "@/lib/constants"
+import { PruebaGratisCTA } from "@/components/prueba-gratis-cta"
 
 export function HeroSection() {
   return (
@@ -35,7 +36,8 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <PruebaGratisCTA label="Probá gratis 7 días" />
             <a
               href={CHECKOUT_URL}
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-electric px-6 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,163,255,0.35)] transition-transform hover:scale-[1.02] hover:bg-brand"
@@ -54,7 +56,7 @@ export function HeroSection() {
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <ShieldCheck className="size-4 shrink-0 text-electric" aria-hidden="true" />
-            Pago seguro con Mercado Pago · Tarjeta o débito
+            Sin tarjeta requerida para la prueba · Pago con Mercado Pago
           </div>
         </div>
 
