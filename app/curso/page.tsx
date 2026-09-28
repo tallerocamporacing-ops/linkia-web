@@ -223,7 +223,7 @@ export default function CursoPage() {
         {/* ============ HERO ============ */}
         <section id="curso-hero" className="relative overflow-hidden bg-background">
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_70%_20%,rgba(0,163,255,0.14),transparent)]" />
-          <div className="mx-auto grid max-w-6xl gap-12 px-4 pt-12 pb-16 sm:px-6 md:grid-cols-[1.15fr_0.85fr] md:items-center md:pt-16 md:pb-24 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-12 px-4 pt-12 pb-16 sm:px-6 md:grid-cols-2 md:items-center md:pt-16 md:pb-24 lg:px-8">
             <div className="flex flex-col gap-6">
               <nav aria-label="Migas de pan" className="font-mono text-xs text-muted-foreground">
                 <Link href="/" className="hover:text-brand">Inicio</Link>
@@ -308,14 +308,14 @@ export default function CursoPage() {
               </div>
             </div>
 
-            <Reveal delay={150} className="relative mx-auto w-full max-w-sm md:max-w-none">
+            <Reveal delay={150} className="relative mx-auto w-full max-w-xl md:max-w-none">
               <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-red-500/20 via-electric/15 to-transparent blur-2xl" />
               <div className="overflow-hidden rounded-2xl border border-border bg-black shadow-2xl">
                 <Image
-                  src="/images/curso-or-linkia.webp"
-                  alt="Curso Profesional de Diagnóstico Automotriz de Ocampo Racing: diagnóstico, osciloscopio, scanner y casos reales, con LINKIA para profesionalizar tu taller"
-                  width={1024}
-                  height={1536}
+                  src="/images/curso-hero.webp"
+                  alt="Curso de Diagnóstico Electrónico de Ocampo Racing con 3 meses de LINKIA gratis: inscribite al curso y empezá a profesionalizar tu taller"
+                  width={1680}
+                  height={945}
                   priority
                   className="h-auto w-full"
                 />

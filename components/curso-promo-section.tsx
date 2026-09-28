@@ -10,7 +10,7 @@ export function CursoPromoSection() {
     <section id="curso" className="bg-background py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-navy via-[#0a2456] to-brand p-6 text-white sm:p-10 md:grid-cols-[1fr_280px]">
+          <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-navy via-[#0a2456] to-brand p-6 text-white sm:p-10 md:grid-cols-[1fr_420px]">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 font-mono text-xs font-medium">
                 <GraduationCap className="size-3.5" aria-hidden="true" />
@@ -40,13 +40,13 @@ export function CursoPromoSection() {
                 </span>
               </div>
             </div>
-            <Link href="/curso" className="mx-auto w-full max-w-[280px] md:max-w-none">
+            <Link href="/curso" className="mx-auto w-full max-w-md md:max-w-none">
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl transition-transform hover:scale-[1.02]">
                 <Image
-                  src="/images/curso-or-linkia.webp"
-                  alt="Curso Profesional de Diagnóstico Automotriz de Ocampo Racing con LINKIA"
-                  width={1024}
-                  height={1536}
+                  src="/images/curso-hero.webp"
+                  alt="Curso de Diagnóstico Electrónico de Ocampo Racing con 3 meses de LINKIA gratis"
+                  width={1680}
+                  height={945}
                   className="h-auto w-full"
                 />
               </div>
