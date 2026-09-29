@@ -1,18 +1,29 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Volume2, VolumeX } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
 const reels = [
-  { src: "/reels/reel-1.mp4", poster: "/images/reel-poster-1.png" },
-  { src: "/reels/reel-2.mp4", poster: "/images/reel-poster-2.png" },
-  { src: "/reels/reel-3.mp4", poster: "/images/reel-poster-3.png" },
+  { src: "/reels/reel-1.mp4" },
+  { src: "/reels/reel-2.mp4" },
+  { src: "/reels/reel-3.mp4" },
 ]
 
 export function ReelsSection() {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
   const [unmutedIndex, setUnmutedIndex] = useState<number | null>(null)
+
+  // Fuerza el play en mount: algunos mobile (iOS Safari Low Power Mode, Data Saver
+  // en Chrome Android) ignoran el atributo autoPlay aunque el video sea muted +
+  // playsInline. Sin esto, se queda el frame en negro / poster.
+  useEffect(() => {
+    videoRefs.current.forEach((v) => {
+      if (!v) return
+      const p = v.play()
+      if (p && typeof p.catch === "function") p.catch(() => {})
+    })
+  }, [])
 
   function toggleMute(index: number) {
     const isCurrentlyUnmuted = unmutedIndex === index
@@ -46,18 +57,18 @@ export function ReelsSection() {
           {reels.map((reel, index) => {
             const isUnmuted = unmutedIndex === index
             return (
-              <Reveal key={reel.poster} delay={index * 100} className="shrink-0 sm:shrink">
+              <Reveal key={reel.src} delay={index * 100} className="shrink-0 sm:shrink">
                 <div className="group relative aspect-9/16 w-64 overflow-hidden rounded-2xl border border-border bg-navy shadow-lg transition-transform duration-300 hover:scale-[1.02] sm:w-full dark:bg-card dark:shadow-[0_10px_30px_-10px_rgba(0,163,255,0.25)]">
                   <video
                     ref={(el) => {
                       videoRefs.current[index] = el
                     }}
                     src={reel.src}
-                    poster={reel.poster}
                     autoPlay
                     muted
                     loop
                     playsInline
+                    preload="metadata"
                     className="h-full w-full object-cover"
                   >
                     <track kind="captions" />
