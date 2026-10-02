@@ -16,11 +16,11 @@ export const CURSO_DUDAS_URL =
 
 export const CURSO_INSTAGRAM_URL = "https://instagram.com/ocampo.racing"
 
-// Precio Hotmart (ARS). Cuotas = Pago Inteligente de Hotmart (con recargo).
-export const CURSO_PRICE_ARS = 320000
-export const CURSO_PRICE_LABEL = "$320.000"
+// Precio Hotmart (ARS). Cuotas = Pago Inteligente de Hotmart (con recargo ~7.65% total en 3).
+export const CURSO_PRICE_ARS = 200000
+export const CURSO_PRICE_LABEL = "$200.000"
 export const CURSO_CUOTAS = 3
-export const CURSO_CUOTA_LABEL = "$114.835"
+export const CURSO_CUOTA_LABEL = "$71.772"
 
 // Bonus: 3 meses de LINKIA sin cargo (valor = 3 × suscripción mensual).
 export const BONUS_MESES = 3
