@@ -7,6 +7,7 @@ import { FeaturesSection } from "@/components/features-section"
 import { MarketingModuleSection } from "@/components/marketing-module-section"
 import { ReelsSection } from "@/components/reels-section"
 import { CursoPromoSection } from "@/components/curso-promo-section"
+import { Piezas3dPromoSection } from "@/components/piezas3d-promo-section"
 import { PricingSection } from "@/components/pricing-section"
 import { FaqSection } from "@/components/faq-section"
 import { FinalCtaSection } from "@/components/final-cta-section"
@@ -29,6 +30,7 @@ export default function Home() {
         <ReelsSection />
         <PricingSection />
         <CursoPromoSection />
+        <Piezas3dPromoSection />
         <FaqSection />
         <FinalCtaSection />
         <SocialSection />

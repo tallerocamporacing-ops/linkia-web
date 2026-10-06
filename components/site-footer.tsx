@@ -29,6 +29,9 @@ export function SiteFooter() {
           <a href="/curso" className="transition-colors hover:text-white">
             Curso
           </a>
+          <a href="/piezas-3d" className="transition-colors hover:text-white">
+            Piezas 3D
+          </a>
           <a href="/blog" className="transition-colors hover:text-white">
             Blog
           </a>
