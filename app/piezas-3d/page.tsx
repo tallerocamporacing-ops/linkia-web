@@ -34,7 +34,7 @@ const PAGE_URL = `${SITE}/piezas-3d`
 const OG = `${SITE}/images/piezas-3d-hero.webp`
 
 export const metadata: Metadata = {
-  title: "Piezas 3D a medida para talleres | Nylon con fibra de carbono | LINKIA",
+  title: "Piezas 3D a medida para talleres | Nylon con fibra de carbono",
   description:
     "Diseño e impresión 3D de piezas a medida para talleres mecánicos: bridas para mariposas, soportes para rampas de inyección y sensores, adaptadores, plantillas y útiles. Nylon reforzado con fibra de carbono. Mandanos fotos o plano y te cotizamos sin compromiso. Envíos a todo el país.",
   keywords: [
