@@ -38,7 +38,7 @@ export function SiteNav() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="/" className="group flex items-center" aria-label="LINKIA - Tu taller, conectado">
           <Image
-            src="/images/linkia-full-transparent.png?v=6"
+            src="/images/linkia-full-transparent.png?v=7"
             alt="LINKIA"
             width={1359}
             height={1040}

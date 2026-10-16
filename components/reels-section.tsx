@@ -5,24 +5,38 @@ import { Volume2, VolumeX } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
 const reels = [
-  { src: "/reels/reel-1.mp4" },
-  { src: "/reels/reel-2.mp4" },
-  { src: "/reels/reel-3.mp4" },
+  { src: "/reels/reel-1.mp4", poster: "/reels/reel-1.jpg" },
+  { src: "/reels/reel-2.mp4", poster: "/reels/reel-2.jpg" },
+  { src: "/reels/reel-3.mp4", poster: "/reels/reel-3.jpg" },
 ]
 
 export function ReelsSection() {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([])
   const [unmutedIndex, setUnmutedIndex] = useState<number | null>(null)
 
-  // Fuerza el play en mount: algunos mobile (iOS Safari Low Power Mode, Data Saver
-  // en Chrome Android) ignoran el atributo autoPlay aunque el video sea muted +
-  // playsInline. Sin esto, se queda el frame en negro / poster.
+  // Carga diferida: los videos (muted/loop) arrancan a reproducirse SOLO cuando la sección
+  // entra en pantalla, y se pausan al salir. Antes se forzaba play() en el mount, lo que
+  // descargaba los 3 videos apenas cargaba la home aunque el visitante no bajara hasta acá.
+  // Con preload="none" + poster, no se descarga nada hasta que se ven.
   useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const v = entry.target as HTMLVideoElement
+          if (entry.isIntersecting) {
+            const p = v.play()
+            if (p && typeof p.catch === "function") p.catch(() => {})
+          } else {
+            v.pause()
+          }
+        })
+      },
+      { threshold: 0.25 },
+    )
     videoRefs.current.forEach((v) => {
-      if (!v) return
-      const p = v.play()
-      if (p && typeof p.catch === "function") p.catch(() => {})
+      if (v) obs.observe(v)
     })
+    return () => obs.disconnect()
   }, [])
 
   function toggleMute(index: number) {
@@ -64,11 +78,11 @@ export function ReelsSection() {
                       videoRefs.current[index] = el
                     }}
                     src={reel.src}
-                    autoPlay
+                    poster={reel.poster}
                     muted
                     loop
                     playsInline
-                    preload="metadata"
+                    preload="none"
                     className="h-full w-full object-cover"
                   >
                     <track kind="captions" />
