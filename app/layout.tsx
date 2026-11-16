@@ -28,11 +28,11 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.linkia.com.ar'),
   title: {
-    default: 'LINKIA — Software de gestión para talleres mecánicos en Argentina | $54.000/mes',
+    default: 'LINKIA — Software de gestión para talleres mecánicos en Argentina',
     template: '%s | LINKIA',
   },
   description:
-    'Software para talleres mecánicos en Argentina. Ordená tu taller con LINKIA: órdenes de trabajo digitales, presupuestos con firma, kanban con semáforo de demora, portal del cliente, recordatorios de VTV y service, control de repuestos y turnos online. Prueba con reembolso 7 días. Desde $54.000/mes sin permanencia.',
+    'Software para talleres mecánicos en Argentina. Ordená tu taller con LINKIA: órdenes de trabajo digitales, presupuestos con firma, kanban con semáforo de demora, portal del cliente, recordatorios de VTV y service, control de repuestos y turnos online. Prueba gratis 7 días. Suscripción mensual sin permanencia.',
   keywords: [
     // núcleo
     'software taller mecánico',
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     siteName: 'LINKIA',
     title: 'LINKIA — Software de gestión para talleres mecánicos',
     description:
-      'Órdenes de trabajo, kanban con semáforo, portal para el cliente, firma digital, presupuestos, agenda y control de repuestos. Todo por $54.000/mes.',
+      'Órdenes de trabajo, kanban con semáforo, portal para el cliente, firma digital, presupuestos, agenda y control de repuestos. Todo en un solo plan.',
     images: [
       {
         url: '/images/dashboard-mockup.png',
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'LINKIA — Tu taller, conectado',
     description:
-      'Sistema de gestión para talleres mecánicos. $54.000/mes con reembolso de 7 días.',
+      'Sistema de gestión para talleres mecánicos. Probá gratis 7 días.',
     images: ['/images/dashboard-mockup.png'],
   },
   robots: {
@@ -156,18 +156,12 @@ const jsonLdSoftware = {
     'Alertas por email y WhatsApp al cliente',
     'Reportes de finanzas y ganancia real',
   ],
+  // Sin precio público (16-nov-2026): la oferta queda sin monto para que Google no lo indexe.
   offers: {
     '@type': 'Offer',
-    price: '54000',
     priceCurrency: 'ARS',
     availability: 'https://schema.org/InStock',
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: '54000',
-      priceCurrency: 'ARS',
-      unitCode: 'MON',
-      referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
-    },
+    url: `${SITE}/#precio`,
   },
   provider: { '@id': `${SITE}/#organization` },
   brand: { '@id': `${SITE}/#organization` },

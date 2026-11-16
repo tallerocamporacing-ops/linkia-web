@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
-import { CHECKOUT_URL, PRICE_ARS_LABEL } from "@/lib/constants"
+import { PRICE_CTA_LABEL, WHATSAPP_PRECIO_URL } from "@/lib/constants"
 import { getPost, posts, type Block } from "@/lib/blog"
 
 const SITE = "https://www.linkia.com.ar"
@@ -180,15 +180,17 @@ export default async function BlogPost({
             </h2>
             <p className="mt-2 text-white/80 dark:text-muted-foreground">
               Órdenes de trabajo, presupuestos con firma, portal del cliente,
-              turnos, repuestos y recordatorios automáticos. {PRICE_ARS_LABEL}/mes,
-              sin permanencia, con reembolso de 7 días.
+              turnos, repuestos y recordatorios automáticos. Suscripción mensual
+              sin permanencia, con prueba gratis de 7 días.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <a
-                href={CHECKOUT_URL}
+                href={WHATSAPP_PRECIO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-electric px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105 hover:bg-brand"
               >
-                Suscribirme ahora
+                {PRICE_CTA_LABEL}
                 <ArrowRight className="size-4" aria-hidden="true" />
               </a>
               <Link

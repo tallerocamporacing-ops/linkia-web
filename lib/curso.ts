@@ -195,7 +195,7 @@ export const cursoFaqs: CursoFaq[] = [
   },
   {
     q: "¿Cómo funcionan los 3 meses bonificados de LINKIA?",
-    a: "Después de comprar el curso nos mandás el comprobante de Hotmart por WhatsApp o email. En menos de 24 horas hábiles te creamos tu cuenta de LINKIA y marcamos tu taller con el plan Curso: 3 meses sin cargo, con todas las funciones. Al terminar el período decidís si seguís pagando la suscripción mensual normal ($54.000). No hay permanencia ni cobro automático.",
+    a: "Después de comprar el curso nos mandás el comprobante de Hotmart por WhatsApp o email. En menos de 24 horas hábiles te creamos tu cuenta de LINKIA y marcamos tu taller con el plan Curso: 3 meses sin cargo, con todas las funciones. Al terminar el período decidís si seguís con la suscripción mensual normal. No hay permanencia ni cobro automático.",
   },
   {
     q: "¿Y si ya soy cliente de LINKIA?",

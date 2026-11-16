@@ -7,7 +7,7 @@ export type Faq = { q: string; a: string }
 export const faqs: Faq[] = [
   {
     q: "¿Cuánto cuesta LINKIA?",
-    a: "$54.000 por mes, con facturación mensual y sin contratos de permanencia. Todas las funciones del sistema vienen incluidas; el único módulo aparte es el de Marketing/Leads.",
+    a: "Es una suscripción mensual con facturación mensual y sin contratos de permanencia; el precio depende del tamaño de tu taller y te lo pasamos por WhatsApp en el momento. Todas las funciones del sistema vienen incluidas; el único módulo aparte es el de Marketing/Leads.",
   },
   {
     q: "¿Todas las funciones vienen incluidas en ese precio?",

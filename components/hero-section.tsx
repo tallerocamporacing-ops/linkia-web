@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { ArrowRight, ShieldCheck, PlayCircle } from "lucide-react"
-import { CHECKOUT_URL, PRICE_ARS_LABEL, PRICE_USD } from "@/lib/constants"
+import { PRICE_CTA_LABEL, WHATSAPP_PRECIO_URL } from "@/lib/constants"
 import { PruebaGratisCTA } from "@/components/prueba-gratis-cta"
 
 export function HeroSection() {
@@ -23,26 +23,24 @@ export function HeroSection() {
 
           <div className="flex flex-col gap-3 rounded-xl border border-electric/30 bg-electric/5 p-4">
             <div className="flex items-baseline gap-3">
-              <span className="font-heading text-4xl font-bold text-navy dark:text-foreground">
-                {PRICE_ARS_LABEL}
-              </span>
-              <span className="text-base font-medium text-muted-foreground">/mes</span>
-              <span className="text-sm text-muted-foreground line-through">
-                US${PRICE_USD}
+              <span className="font-heading text-2xl font-bold text-navy sm:text-3xl dark:text-foreground">
+                Un solo plan, todo incluido
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Facturación mensual, sin contratos ni permanencia.
+              Suscripción mensual, sin contratos ni permanencia. Usuarios ilimitados.
             </p>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <PruebaGratisCTA label="Probá gratis 7 días" />
             <a
-              href={CHECKOUT_URL}
+              href={WHATSAPP_PRECIO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-electric px-6 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,163,255,0.35)] transition-transform hover:scale-[1.02] hover:bg-brand"
             >
-              Suscribirme ahora
+              {PRICE_CTA_LABEL}
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
             <a

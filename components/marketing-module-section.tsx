@@ -127,7 +127,7 @@ export function MarketingModuleSection() {
                 </p>
                 <p className="mt-3 text-xs text-silver/70">
                   ⚠️ Este servicio se cotiza y contrata directamente con
-                  Condimento — no viene incluido en los $54.000/mes de LINKIA.
+                  Condimento — no viene incluido en la suscripción de LINKIA.
                 </p>
               </div>
               <a

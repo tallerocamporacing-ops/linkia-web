@@ -1,5 +1,5 @@
 import { ArrowRight, Check, ShieldCheck } from "lucide-react"
-import { CHECKOUT_URL, PRICE_ARS_LABEL, PRICE_USD } from "@/lib/constants"
+import { PRICE_CTA_LABEL, WHATSAPP_PRECIO_URL } from "@/lib/constants"
 import { Reveal } from "@/components/reveal"
 
 const includes = [
@@ -21,13 +21,14 @@ export function PricingSection() {
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <h2 className="font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl dark:text-foreground">
-              Un precio, todo incluido
+              Un plan, todo incluido
             </h2>
           </Reveal>
           <Reveal delay={100}>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Sin planes confusos ni cargos por usuario. Un solo precio con
-              todo lo que tu taller necesita.
+              Sin planes confusos ni cargos por usuario. Un solo plan con
+              todo lo que tu taller necesita, a un precio pensado para tu
+              taller.
             </p>
           </Reveal>
         </div>
@@ -39,13 +40,12 @@ export function PricingSection() {
                 Plan único
               </p>
               <div className="mt-2 flex items-baseline justify-center gap-2">
-                <span className="font-heading text-5xl font-bold">
-                  {PRICE_ARS_LABEL}
+                <span className="font-heading text-3xl font-bold sm:text-4xl">
+                  Suscripción mensual
                 </span>
-                <span className="text-lg font-medium opacity-90">/mes</span>
               </div>
               <p className="mt-1 text-sm opacity-80">
-                Equivale a US${PRICE_USD}/mes · IVA incluido
+                Precio según tu taller · IVA incluido · sin permanencia
               </p>
             </div>
 
@@ -65,10 +65,12 @@ export function PricingSection() {
 
             <div className="border-t border-border bg-muted/30 p-8">
               <a
-                href={CHECKOUT_URL}
+                href={WHATSAPP_PRECIO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex w-full items-center justify-center gap-2 rounded-lg bg-electric px-6 py-4 text-lg font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] hover:bg-brand"
               >
-                Suscribirme ahora
+                {PRICE_CTA_LABEL}
                 <ArrowRight className="size-5" aria-hidden="true" />
               </a>
               <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">

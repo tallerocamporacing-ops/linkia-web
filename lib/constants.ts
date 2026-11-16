@@ -9,11 +9,15 @@ export const TIKTOK_URL = "https://tiktok.com/@linkia.app"
 export const LOGIN_URL = "https://linkia.com.ar/login"
 
 // Precio de la suscripción. USD es referencia; MP cobra en ARS.
-// Cambiar acá + git push actualiza landing entera. MP notifica a suscriptores
-// activos con 10 días de anticipación si sube el precio (lo hace el worker).
+// 16-nov-2026: el precio NO se muestra en la landing (se vende también en
+// España a otro valor). Las constantes quedan para el checkout/worker.
 export const PRICE_ARS = 54000
 export const PRICE_USD = 35
 export const PRICE_ARS_LABEL = "$54.000"
+// Texto que reemplaza al precio en la landing.
+export const PRICE_CTA_LABEL = "Pedir precio por WhatsApp"
+export const WHATSAPP_PRECIO_URL =
+  "https://wa.me/5491130293345?text=Hola%20LINKIA%2C%20quiero%20saber%20el%20precio%20para%20mi%20taller"
 
 // Checkout de Mercado Pago. El worker en /api/mp/checkout crea el preapproval
 // (suscripción mensual) y hace 302 al init_point de MP.

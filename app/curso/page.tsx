@@ -26,10 +26,8 @@ import { Temario } from "@/components/curso/temario"
 import { CursoFaq } from "@/components/curso/curso-faq"
 import { StickyCta } from "@/components/curso/sticky-cta"
 import { WhatsAppFloatButton } from "@/components/whatsapp-float-button"
-import { PRICE_ARS_LABEL } from "@/lib/constants"
 import {
   BONUS_MESES,
-  BONUS_VALOR_LABEL,
   CURSO_CHECKOUT_URL,
   CURSO_CUOTAS,
   CURSO_CUOTA_LABEL,
@@ -92,7 +90,7 @@ export const metadata: Metadata = {
 const stats = [
   { icon: Clock, numero: CURSO_HORAS_LABEL, label: "de video", sub: `${CURSO_MINUTOS} min editados`, color: "text-electric" },
   { icon: Layers, numero: "11", label: "módulos", sub: "video + PDF cada uno", color: "text-emerald-500" },
-  { icon: Gift, numero: `${BONUS_MESES} meses`, label: "de LINKIA gratis", sub: `ahorrás ${BONUS_VALOR_LABEL}`, color: "text-amber-500" },
+  { icon: Gift, numero: `${BONUS_MESES} meses`, label: "de LINKIA gratis", sub: "con todas las funciones", color: "text-amber-500" },
   { icon: ShieldCheck, numero: "7 días", label: "de garantía", sub: "reembolso total", color: "text-violet-500" },
 ]
 
@@ -261,7 +259,7 @@ export default function CursoPage() {
                 </div>
                 <p className="flex items-center gap-2 text-sm font-semibold text-brand">
                   <Gift className="size-4" aria-hidden="true" />
-                  Incluye {BONUS_MESES} meses de LINKIA sin cargo (ahorrás {BONUS_VALOR_LABEL})
+                  Incluye {BONUS_MESES} meses de LINKIA sin cargo
                 </p>
               </div>
 
@@ -416,7 +414,7 @@ export default function CursoPage() {
                 </p>
                 <ul className="mt-6 flex flex-col gap-3 text-sm">
                   {[
-                    `Valor real del bonus: ${BONUS_VALOR_LABEL} (${BONUS_MESES} × ${PRICE_ARS_LABEL})`,
+                    `${BONUS_MESES} meses completos de suscripción, con todas las funciones incluidas`,
                     "Todas las funciones, usuarios ilimitados, sin tarjeta",
                     "Te ayudamos a cargar clientes y vehículos el primer día",
                     "Al terminar decidís si seguís. Sin permanencia ni cobro automático",

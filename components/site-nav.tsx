@@ -3,14 +3,14 @@
 import { useState } from "react"
 import Image from "next/image"
 import { ArrowRight, LogIn, Menu, X } from "lucide-react"
-import { CHECKOUT_URL, LOGIN_URL } from "@/lib/constants"
+import { LOGIN_URL, WHATSAPP_PRECIO_URL } from "@/lib/constants"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const navLinks = [
   { label: "Video", href: "/#tour" },
   { label: "Funciones", href: "/#funciones" },
   { label: "Marketing", href: "/#marketing" },
-  { label: "Precio", href: "/#precio" },
+  { label: "Plan", href: "/#precio" },
   { label: "Curso", href: "/curso" },
   { label: "Piezas 3D", href: "/piezas-3d" },
   { label: "Blog", href: "/blog" },
@@ -75,10 +75,12 @@ export function SiteNav() {
           </a>
 
           <a
-            href={CHECKOUT_URL}
+            href={WHATSAPP_PRECIO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-electric px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-105 hover:bg-brand sm:px-5"
           >
-            <span className="hidden sm:inline">Suscribirme</span>
+            <span className="hidden sm:inline">Pedir precio</span>
             <span className="sm:hidden">Empezar</span>
             <ArrowRight className="size-4" aria-hidden="true" />
           </a>

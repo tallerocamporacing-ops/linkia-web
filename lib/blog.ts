@@ -88,7 +88,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        html: "LINKIA cumple los siete puntos. Está hecho en Argentina por un taller para talleres, cuesta <a href='/#precio'>$54.000 por mes</a> y podés ver <a href='/#funciones'>todas las funciones acá</a>.",
+        html: "LINKIA cumple los siete puntos. Está hecho en Argentina por un taller para talleres, tiene <a href='/#precio'>un solo plan con todo incluido</a> y podés ver <a href='/#funciones'>todas las funciones acá</a>.",
       },
     ],
   },
@@ -250,7 +250,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        html: "LINKIA genera presupuestos en PDF con tu logo, los publica en el portal del cliente para que los apruebe desde el celular y te avisa qué otros trabajos le tocan al auto. Todo por <a href='/#precio'>$54.000 por mes</a>.",
+        html: "LINKIA genera presupuestos en PDF con tu logo, los publica en el portal del cliente para que los apruebe desde el celular y te avisa qué otros trabajos le tocan al auto. Todo incluido en <a href='/#precio'>un solo plan mensual</a>.",
       },
     ],
   },

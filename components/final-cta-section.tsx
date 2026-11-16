@@ -1,5 +1,5 @@
 import { ArrowRight, MessageCircle, ShieldCheck } from "lucide-react"
-import { CHECKOUT_URL, PRICE_ARS_LABEL, WHATSAPP_URL } from "@/lib/constants"
+import { PRICE_CTA_LABEL, WHATSAPP_PRECIO_URL, WHATSAPP_URL } from "@/lib/constants"
 import { Reveal } from "@/components/reveal"
 
 export function FinalCtaSection() {
@@ -10,15 +10,17 @@ export function FinalCtaSection() {
           Empezá a ordenar tu taller hoy
         </h2>
         <p className="max-w-xl text-lg leading-relaxed text-silver">
-          Suscribite por {PRICE_ARS_LABEL}/mes y en menos de 24hs tenés el
-          sistema andando con tus datos cargados.
+          Escribinos y en menos de 24hs tenés el sistema andando con tus
+          datos cargados.
         </p>
         <div className="flex flex-col items-center gap-3 sm:flex-row">
           <a
-            href={CHECKOUT_URL}
+            href={WHATSAPP_PRECIO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-electric px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(0,163,255,0.35)] transition-transform hover:scale-105"
           >
-            Suscribirme ahora
+            {PRICE_CTA_LABEL}
             <ArrowRight className="size-5" aria-hidden="true" />
           </a>
           <a
